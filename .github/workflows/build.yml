@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -19,11 +20,13 @@ jobs:
         with:
           gradle-version: current
 
-      - run: gradle build
+      - name: Build LungeSwap
+        working-directory: lungeswap
+        run: gradle build
 
       - uses: actions/upload-artifact@v4
         with:
           name: lungeswap-jar
           path: |
-            build/libs/*.jar
-            !build/libs/*-sources.jar
+            lungeswap/build/libs/*.jar
+            !lungeswap/build/libs/*-sources.jar
