@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "lungeswap",
+  "version": "${version}",
+  "name": "Lunge Swap",
+  "description": "Keybind-Macro fuer den Speer-Lunge-Swap (Speer Slot 9, Mace Slot 3).",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.lungeswap.LungeSwapClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*"
+  }
+}
